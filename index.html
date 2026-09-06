@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>邱南寅・小南雕刻｜龍益宗教文物 — 一面牌位，一部家族的故事</title>
+<meta name="description" content="邱南寅（小南），龍益宗教文物有限公司總經理、小南雕刻主理人。承接父輩四十年的台南宗教文物家業，以資料校對與雷射雕刻保存祖先名諱，已協助二十餘座宗祠與上千戶家庭。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;500;700&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* 溫潤紙色 × 廟宇朱金 */
+  --paper:#faf5ec;
+  --paper-2:#f5ecdd;
+  --sand:#eee1cd;
+  --card:#fffdf8;
+  --ink:#332720;
+  --ink-strong:#241a14;
+  --muted:#806d5c;
+  --line:rgba(51,39,32,.14);
+  --line-soft:rgba(51,39,32,.09);
+  --red:#a8392a;
+  --red-deep:#8b2b1e;
+  --gold:#b0812c;
+  --gold-lt:#d7a94f;
+
+  --shadow-sm:0 2px 10px rgba(110,74,42,.08);
+  --shadow:0 14px 36px rgba(110,74,42,.13);
+  --shadow-lg:0 28px 64px rgba(96,62,36,.20);
+
+  --font-display:"Noto Serif TC","Songti TC","Source Han Serif TC",serif;
+  --font-body:"Noto Sans TC","PingFang TC","Heiti TC",system-ui,sans-serif;
+
+  --gutter:clamp(1.25rem,5vw,5.5rem);
+  --maxw:1240px;
+  --r:14px;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}
+ *,*::before,*::after{animation-duration:.001ms!important;transition-duration:.001ms!important}}
+
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--font-body);font-size:16.5px;line-height:1.8;
+  -webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:4px}
+.wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:var(--gutter)}
+
+/* ---------- type ---------- */
+.eyebrow{font-size:11.5px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--red)}
+h1,h2,h3{font-family:var(--font-display);font-weight:500;margin:0;color:var(--ink-strong)}
+h2{font-size:clamp(1.75rem,1.1rem + 2.1vw,2.8rem);line-height:1.34;letter-spacing:-.01em}
+h3{font-size:clamp(1.1rem,1rem + .5vw,1.32rem);line-height:1.5}
+p{margin:0 0 1.1em}
+.lede{font-size:clamp(1rem,.95rem + .3vw,1.12rem);color:#63523f;max-width:62ch}
+
+/* ---------- header ---------- */
+.top{position:sticky;top:0;z-index:50;background:rgba(250,245,236,.9);backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line-soft)}
+.top__in{display:flex;align-items:center;gap:1.5rem;justify-content:space-between;padding-block:.75rem}
+.brandmark{display:flex;align-items:center;gap:.7rem;text-decoration:none}
+.seal{width:36px;height:36px;flex:none;display:grid;place-items:center;
+  background:linear-gradient(150deg,#b8422f,#8b2b1e);color:#f8e7c8;font-family:var(--font-display);
+  font-size:18px;line-height:1;border-radius:6px;box-shadow:0 4px 12px rgba(139,43,30,.3),inset 0 0 0 1px rgba(255,255,255,.16)}
+.brandmark b{font-family:var(--font-display);font-size:16.5px;letter-spacing:.06em;color:var(--ink-strong)}
+.brandmark span{display:block;font-size:11px;letter-spacing:.14em;color:var(--muted)}
+.nav{display:flex;gap:1.5rem;font-size:14px;letter-spacing:.06em}
+.nav a{text-decoration:none;color:#6b5949;padding:.25rem .1rem;border-bottom:1.5px solid transparent;transition:.15s}
+.nav a:hover{color:var(--red);border-color:var(--red)}
+@media(max-width:900px){.nav{display:none}}
+
+/* ---------- buttons ---------- */
+.btn{display:inline-flex;align-items:center;gap:.5rem;text-decoration:none;font-size:14.5px;font-weight:500;
+  letter-spacing:.05em;padding:.85rem 1.5rem;border-radius:4px;transition:.15s}
+.btn:active{transform:translateY(1px)}
+.btn--solid{background:linear-gradient(160deg,#b8422f,#8f2c1f);color:#fdf1de;border:1px solid transparent;
+  box-shadow:0 8px 20px rgba(139,43,30,.26)}
+.btn--solid:hover{filter:brightness(1.08)}
+.btn--ghost{border:1px solid rgba(51,39,32,.22);color:var(--ink);background:rgba(255,255,255,.55)}
+.btn--ghost:hover{border-color:var(--gold);color:var(--red)}
+
+/* ---------- hero ---------- */
+.hero{position:relative;overflow:hidden;
+  background:
+    radial-gradient(900px 560px at 84% 4%,#fdeed6 0%,rgba(253,238,214,0) 60%),
+    radial-gradient(680px 480px at 2% 88%,#f7e6cf 0%,rgba(247,230,207,0) 62%),
+    var(--paper);
+  border-bottom:1px solid var(--line-soft)}
+.hero__in{display:grid;grid-template-columns:minmax(0,1.06fr) minmax(0,.94fr);gap:clamp(2rem,5vw,4.5rem);
+  align-items:center;padding-block:clamp(3rem,7vw,5.6rem)}
+.kicker{display:inline-flex;align-items:center;gap:.5rem;font-size:12.5px;letter-spacing:.14em;color:var(--red);
+  background:#fbeadb;border:1px solid #eed3b7;padding:.4rem .95rem;border-radius:3px}
+.hero__en{font-size:12px;letter-spacing:.42em;color:var(--muted);text-transform:uppercase;margin:1.05rem 0 0}
+.hero h1{font-size:clamp(2.9rem,1.8rem + 6.6vw,5.5rem);line-height:1.04;letter-spacing:-.02em;margin:.5rem 0 0}
+.hero h1 em{font-style:normal;color:var(--red)}
+.hero__sub{font-family:var(--font-display);font-size:clamp(1.15rem,1rem + 1vw,1.62rem);line-height:1.6;
+  color:#4a3a2c;margin:1.15rem 0 0;padding-inline-start:1rem;border-inline-start:3px solid var(--gold-lt);max-width:26ch}
+.hero__note{margin:1.05rem 0 0;font-size:15px;color:#6b5949;max-width:38ch}
+.hero__roles{margin-top:1.4rem;display:flex;flex-wrap:wrap;gap:.5rem}
+.tag{font-size:12.5px;color:#6b5949;background:#fff;border:1px solid var(--line-soft);padding:.38rem .85rem;
+  border-radius:3px;box-shadow:var(--shadow-sm)}
+.hero__cta{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.9rem}
+
+.hero__media{position:relative}
+.hero__media .frame{position:relative;border-radius:10px;overflow:hidden;box-shadow:var(--shadow-lg);
+  border:1px solid rgba(176,129,44,.35)}
+.hero__media .frame img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:50% 22%}
+.hero__inset{position:absolute;left:clamp(-1.2rem,-3vw,-2.6rem);bottom:clamp(-1rem,-2.5vw,-2rem);
+  width:clamp(150px,42%,232px);border-radius:8px;overflow:hidden;background:var(--card);
+  box-shadow:var(--shadow);border:3px solid var(--card)}
+.hero__inset img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:52% 42%}
+.hero__stamp{position:absolute;right:clamp(-.6rem,-1.5vw,-1.2rem);top:clamp(-.8rem,-2vw,-1.4rem);
+  background:linear-gradient(150deg,#b8422f,#8b2b1e);color:#f8e7c8;font-family:var(--font-display);
+  writing-mode:vertical-rl;text-orientation:upright;letter-spacing:.22em;font-size:14px;
+  padding:.9rem .5rem;border-radius:4px;box-shadow:0 8px 20px rgba(139,43,30,.3)}
+@media(max-width:900px){
+  .hero__in{grid-template-columns:1fr;gap:2.8rem}
+  .hero__media{order:-1;margin-inline:auto;max-width:460px;width:100%}
+  .hero__media .frame img{aspect-ratio:4/3;object-position:50% 20%}
+  .hero__inset{width:36%}
+}
+
+/* ---------- facts ---------- */
+.facts{background:var(--sand);border-bottom:1px solid var(--line-soft)}
+.facts__in{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(.7rem,2vw,1.3rem);
+  padding-block:clamp(1.6rem,4vw,2.4rem)}
+.fact{background:var(--card);border-radius:6px;padding:1.15rem 1.3rem;box-shadow:var(--shadow-sm);
+  border-top:2px solid var(--gold-lt)}
+.fact b{display:block;font-family:var(--font-display);color:var(--red);
+  font-size:clamp(1.45rem,1.1rem + 1.3vw,2.05rem);line-height:1.15;letter-spacing:-.02em}
+.fact span{display:block;font-size:12.5px;letter-spacing:.08em;color:var(--muted);margin-top:.2rem}
+@media(max-width:820px){.facts__in{grid-template-columns:repeat(2,1fr)}}
+
+/* ---------- bands ---------- */
+section{scroll-margin-top:76px}
+.band{padding-block:clamp(3.4rem,8vw,6.2rem)}
+.band--paper{background:var(--paper)}
+.band--white{background:#fffdf8}
+.band--sand{background:linear-gradient(180deg,var(--paper-2),var(--sand))}
+
+.head{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(1.4rem,4vw,4rem);
+  align-items:end;margin-bottom:clamp(2rem,5vw,3.2rem)}
+@media(max-width:860px){.head{grid-template-columns:1fr;align-items:start}}
+.head .eyebrow{display:block;margin-bottom:.8rem}
+
+/* ---------- figures ---------- */
+.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:clamp(1rem,2.4vw,1.7rem)}
+.c8{grid-column:span 8}.c7{grid-column:span 7}.c6{grid-column:span 6}
+.c5{grid-column:span 5}.c4{grid-column:span 4}.c12{grid-column:span 12}
+@media(max-width:860px){.c8,.c7,.c6,.c5,.c4{grid-column:span 12}}
+.fig{margin:0;border-radius:10px;overflow:hidden;background:var(--card);box-shadow:var(--shadow);
+  border:1px solid rgba(176,129,44,.22)}
+.fig img{width:100%;object-fit:cover}
+.fig--43 img{aspect-ratio:4/3}
+.fig--34 img{aspect-ratio:3/4}
+.fig--11 img{aspect-ratio:1/1}
+.fig--wide img{aspect-ratio:16/9}
+.fig figcaption{padding:.8rem 1.1rem;font-size:13px;letter-spacing:.05em;color:#6b5949;background:var(--card);
+  border-top:1px solid var(--line-soft)}
+.fig figcaption b{color:var(--red);font-weight:500}
+
+/* ---------- timeline ---------- */
+.era{display:grid;grid-template-columns:9rem minmax(0,1fr);gap:clamp(1rem,3vw,2.5rem);
+  padding:1.55rem 0;border-top:1px solid var(--line-soft)}
+.era:last-of-type{border-bottom:1px solid var(--line-soft)}
+.era__y{font-family:var(--font-display);font-size:1.05rem;color:var(--red);padding-top:.15rem}
+.era__y i{display:block;font-style:normal;font-size:11px;letter-spacing:.16em;color:var(--muted);margin-top:.2rem}
+.era h3{margin-bottom:.4rem}
+.era p{margin:0;color:#5b4b3d;max-width:64ch}
+@media(max-width:640px){.era{grid-template-columns:1fr;gap:.45rem}}
+
+/* ---------- tenets ---------- */
+.tenets{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1rem,2vw,1.6rem)}
+.tenet{background:var(--card);border:1px solid var(--line-soft);border-radius:10px;
+  padding:clamp(1.4rem,3vw,2.1rem);box-shadow:var(--shadow-sm);border-top:2px solid var(--gold-lt);transition:.18s}
+.tenet:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.tenet__n{display:inline-grid;place-items:center;width:32px;height:32px;border-radius:3px;
+  background:#fbeadb;color:var(--red);font-family:var(--font-display);font-size:15px;margin-bottom:1.1rem}
+.tenet h3{margin-bottom:.55rem}
+.tenet p{color:#63523f;margin:0;font-size:15px}
+@media(max-width:860px){.tenets{grid-template-columns:1fr}}
+
+/* ---------- red quote band ---------- */
+.pull{position:relative;overflow:hidden;padding-block:clamp(3.4rem,8vw,5.6rem);
+  background:linear-gradient(135deg,#b8422f 0%,#9a3021 55%,#7f2417 100%);color:#fbecd7}
+.pull::after{content:"敬";position:absolute;right:2%;top:50%;transform:translateY(-50%);
+  font-family:var(--font-display);font-size:clamp(9rem,22vw,16rem);line-height:1;color:rgba(255,231,190,.10)}
+.pull__in{position:relative;max-width:56ch}
+.pull blockquote{margin:0;font-family:var(--font-display);font-size:clamp(1.7rem,1.1rem + 2.7vw,3rem);
+  line-height:1.42;color:#fdf3e2}
+.pull blockquote em{font-style:normal;color:#f3ce8a}
+.pull cite{display:block;margin-top:1.3rem;font-style:normal;font-size:12.5px;letter-spacing:.14em;
+  color:rgba(253,243,226,.72)}
+
+/* ---------- services ---------- */
+.svc{list-style:none;margin:0;padding:0;columns:2;column-gap:2.5rem}
+.svc li{break-inside:avoid;padding:.58rem 0 .58rem 1.6rem;border-bottom:1px solid var(--line-soft);
+  position:relative;font-size:15px;color:#54463a}
+.svc li::before{content:"";position:absolute;inset-inline-start:0;top:1.25em;width:7px;height:7px;
+  background:var(--gold-lt);transform:rotate(45deg)}
+@media(max-width:640px){.svc{columns:1}}
+
+/* ---------- 承 ---------- */
+.mark{background:linear-gradient(180deg,#fffdf8,#f3e7d4);border-block:1px solid var(--line-soft);
+  padding-block:clamp(2.8rem,6vw,4.6rem)}
+.mark__in{display:grid;grid-template-columns:auto minmax(0,1fr);gap:clamp(1.5rem,4vw,3.5rem);align-items:center}
+.mark__glyph{font-family:var(--font-display);font-size:clamp(5rem,4rem + 9vw,10rem);line-height:1;
+  color:transparent;background:linear-gradient(160deg,#d7a94f,#b0812c 50%,#a8392a);
+  -webkit-background-clip:text;background-clip:text;letter-spacing:.06em}
+.mark p{margin:0;color:#5b4b3d;font-size:16px;max-width:52ch}
+.mark p.big{font-family:var(--font-display);font-size:clamp(1.15rem,1rem + .9vw,1.5rem);color:var(--ink-strong);
+  margin-bottom:.6rem;line-height:1.6}
+@media(max-width:760px){.mark__in{grid-template-columns:1fr;text-align:left}}
+
+/* ---------- business ---------- */
+.roles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(1.2rem,3vw,2.4rem)}
+@media(max-width:860px){.roles{grid-template-columns:1fr}}
+.sub{font-size:1rem;letter-spacing:.06em;color:var(--muted);font-weight:500;margin:0}
+.ladder{list-style:none;margin:1rem 0 0;padding:0;background:var(--card);border-radius:10px;
+  border:1px solid var(--line-soft);box-shadow:var(--shadow-sm);overflow:hidden}
+.ladder li{display:flex;gap:1rem;justify-content:space-between;align-items:baseline;padding:.75rem 1.1rem;
+  border-bottom:1px solid var(--line-soft);font-size:14.5px;color:#5b4b3d}
+.ladder li:last-child{border-bottom:0}
+.ladder li b{font-weight:500;color:var(--ink-strong)}
+.ladder li span{font-size:11.5px;letter-spacing:.1em;color:var(--muted);white-space:nowrap}
+.ladder li.is-now{background:#fbeadb}
+.ladder li.is-now b,.ladder li.is-now span{color:var(--red)}
+.card{border:1px solid var(--line-soft);border-radius:10px;padding:clamp(1.35rem,3vw,1.9rem);
+  background:var(--card);box-shadow:var(--shadow-sm)}
+.card h3{margin-bottom:.8rem}
+.card p{color:#63523f;font-size:15px}
+.card p:last-child{margin-bottom:0}
+
+/* ---------- contact ---------- */
+.contact{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(1.6rem,5vw,4rem)}
+@media(max-width:860px){.contact{grid-template-columns:1fr}}
+.dl{margin:0;display:grid;grid-template-columns:6.5rem minmax(0,1fr);gap:.15rem 1rem;font-size:15px}
+.dl dt{color:var(--muted);font-size:12.5px;letter-spacing:.12em;padding-top:.6rem}
+.dl dd{margin:0;padding-top:.45rem;color:#42352b}
+.dl dd a{text-decoration:none;border-bottom:1px solid rgba(168,57,42,.35);color:#42352b}
+.dl dd a:hover{border-color:var(--red);color:var(--red)}
+.social{list-style:none;margin:1.1rem 0 0;padding:0;display:grid;gap:.5rem}
+.social a{display:flex;align-items:center;gap:.85rem;background:var(--card);border:1px solid var(--line-soft);
+  border-radius:8px;padding:.8rem 1rem;text-decoration:none;color:#42352b;font-size:14.5px;
+  box-shadow:var(--shadow-sm);transition:.15s}
+.social a:hover{transform:translateX(3px);border-color:var(--gold-lt);background:#fffaf1}
+.social svg{flex:none;width:18px;height:18px;stroke:var(--red);stroke-width:1.7;fill:none;
+  stroke-linecap:round;stroke-linejoin:round}
+.social em{margin-inline-start:auto;font-style:normal;font-size:11.5px;letter-spacing:.08em;color:var(--muted)}
+
+/* ---------- footer ---------- */
+.foot{background:var(--sand);border-top:2px solid var(--gold-lt);padding-block:2.3rem;font-size:12.5px;color:#7a6857}
+.foot__in{display:flex;flex-wrap:wrap;gap:.8rem 2rem;justify-content:space-between;align-items:center}
+.foot p{margin:0;max-width:60ch;letter-spacing:.03em}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap top__in">
+    <a class="brandmark" href="#top">
+      <span class="seal" aria-hidden="true">南</span>
+      <span>
+        <b>邱南寅</b>
+        <span>龍益宗教文物・小南雕刻</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="主要導覽">
+      <a href="#lineage">家業</a>
+      <a href="#belief">理念</a>
+      <a href="#work">龍益行</a>
+      <a href="#business">商務</a>
+      <a href="#contact">聯絡</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="hero-h">
+    <div class="wrap hero__in">
+      <div>
+        <span class="kicker">台南・安南　龍益宗教文物有限公司</span>
+        <p class="hero__en">Qiu Nan-Yin · Tainan</p>
+        <h1 id="hero-h">邱<em>南寅</em></h1>
+        <p class="hero__sub">一面牌位，<br>一部家族的故事。</p>
+        <p class="hero__note">父親做了四十餘年的宗教文物，他接下來的不只是店，是別人家最慎重的那件事——把祖先的名字，一個一個安放好。</p>
+        <div class="hero__roles">
+          <span class="tag">龍益宗教文物有限公司　總經理</span>
+          <span class="tag">小南雕刻・雕刻南人　主理人</span>
+          <span class="tag">BNI 大台南南區真鑫分會　創會團隊</span>
+        </div>
+        <div class="hero__cta">
+          <a class="btn btn--solid" href="#contact">與小南聯絡</a>
+          <a class="btn btn--ghost" href="#lineage">看家業的來歷</a>
+        </div>
+      </div>
+
+      <div class="hero__media">
+        <div class="frame">
+          <img src="assets/nan-portrait.jpg" width="1080" height="1440" fetchpriority="high"
+               alt="邱南寅身著襯衫領帶，專注地為神像整理帽冠。">
+        </div>
+        <div class="hero__inset">
+          <img src="assets/bench.jpg" width="960" height="980" loading="lazy"
+               alt="邱南寅在工作檯前雷射雕刻，桌上排著刻好的牌位內板與一座公媽龕。">
+        </div>
+        <span class="hero__stamp" aria-hidden="true">第二代</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FACTS -->
+  <section class="facts" aria-label="重點數字">
+    <div class="wrap facts__in">
+      <div class="fact"><b>40<span style="font-size:.5em">年+</span></b><span>在地宗教服務</span></div>
+      <div class="fact"><b>20<span style="font-size:.5em">餘座</span></b><span>宗祠祖牌整理</span></div>
+      <div class="fact"><b>1,000<span style="font-size:.5em">戶+</span></b><span>家庭名諱刻製</span></div>
+      <div class="fact"><b>2<span style="font-size:.5em">代</span></b><span>父子接力守業</span></div>
+    </div>
+  </section>
+
+  <!-- 家業 -->
+  <section class="band band--white" id="lineage" aria-labelledby="lineage-h">
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <span class="eyebrow">Lineage — 家業</span>
+          <h2 id="lineage-h">父親起的頭，<br>兒子接的責任</h2>
+        </div>
+        <p class="lede">龍益不是一間新開的店。它從永康六甲頂的一間佛具行開始，跟著台南人的婚喪喜慶、入厝安座、慎終追遠一路走過來。邱南寅接下的不只是招牌，而是一整條被信任著的關係。</p>
+      </div>
+
+      <div class="grid" style="margin-bottom:clamp(1.6rem,4vw,2.6rem)">
+        <figure class="fig fig--43 c7">
+          <img src="assets/carving-detail.jpg" width="1600" height="1200" loading="lazy"
+               alt="關聖帝君神龕上方的浮雕與貼金匾額特寫，木紋與雕工細節清晰。">
+          <figcaption><b>老手路</b>　父輩傳下來的浮雕與貼金工序，至今仍是店裡的基本功</figcaption>
+        </figure>
+        <figure class="fig fig--34 c5" style="align-self:start">
+          <img src="assets/laser-tablet.jpg" width="1200" height="1600" loading="lazy"
+               alt="雷射雕刻機台上剛完成的金黑色令牌，龍首與雲紋鏤空雕刻。">
+          <figcaption><b>新工法</b>　同一套規矩，換成雷射精刻與電子建檔</figcaption>
+        </figure>
+      </div>
+
+      <div class="era">
+        <div class="era__y">起家<i>LIU-JIA-DING</i></div>
+        <div>
+          <h3>永康六甲頂・一間佛具行</h3>
+          <p>父親邱崑益從佛具、金紙與祭祀用品做起，店名裡的「益」字，就是他自己的名字。老主顧從那時候跟到現在——北區華德里的里長一家，就是從六甲頂時期開始往來的。</p>
+        </div>
+      </div>
+      <div class="era">
+        <div class="era__y">2001<i>REGISTERED</i></div>
+        <div>
+          <h3>龍益行正式立案</h3>
+          <p>同年，家族在永康與安南陸續設立龍益佛具企業社與龍益行，以宗教及宗教用品零售為本業，把口碑生意變成一間有登記、有制度的店。</p>
+        </div>
+      </div>
+      <div class="era">
+        <div class="era__y">2009<i>EXPANSION</i></div>
+        <div>
+          <h3>從企業社到有限公司</h3>
+          <p>業務從零售擴到神桌、祭祀用品的批發與製造，經營規模與品項一路長大，落腳台南市安南區北安路二段 612 號至今。</p>
+        </div>
+      </div>
+      <div class="era">
+        <div class="era__y">接班<i>THE SON</i></div>
+        <div>
+          <h3>邱南寅回家，帶著一套管理方法</h3>
+          <p>中信科技大學畢業的他，把在校所學的企業管理帶回傳統產業：建立資料整理、字體排版、雕刻製作到成品確認的完整流程，讓一件件靠師傅記憶完成的事，變成可以被複製、被交接、被查核的制度。</p>
+        </div>
+      </div>
+      <div class="era">
+        <div class="era__y">今日<i>TODAY</i></div>
+        <div>
+          <h3>二十餘座宗祠，上千戶人家</h3>
+          <p>服務範圍遍及台南及周邊縣市；外縣市也能以拍照建檔的方式遠距完成。父親守住的是信任，兒子加上的是讓信任可以留存的技術。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 座右銘 -->
+  <section class="pull" aria-label="座右銘">
+    <div class="wrap">
+      <div class="pull__in">
+        <blockquote>先相信，<em>後看見</em>。<br>付出者收穫。</blockquote>
+        <cite>邱南寅・個人主頁上的一句話</cite>
+      </div>
+    </div>
+  </section>
+
+  <!-- 理念 -->
+  <section class="band band--paper" id="belief" aria-labelledby="belief-h">
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <span class="eyebrow">Belief — 理念</span>
+          <h2 id="belief-h">很多人以為<br>我們在做雕刻</h2>
+        </div>
+        <p class="lede">「我們做的，不只是神主牌，而是幫助一個家族，把祖先的名字好好安放。從混亂到清楚，從不確定到安心。」——這是他寫在自家粉專上的話，也是龍益現在的做事準則。</p>
+      </div>
+
+      <div class="tenets" style="margin-bottom:clamp(1.6rem,4vw,2.4rem)">
+        <article class="tenet">
+          <span class="tenet__n">壹</span>
+          <h3>不只把字刻上去，<br>先把資料整理對</h3>
+          <p>姓名、稱謂、輩分、生卒、堂號、籍貫——一面牌位是一份縮小的家譜。字序錯了，後代就認錯了自己的家。所以雕刻之前，先做的是校對。</p>
+        </article>
+        <article class="tenet">
+          <span class="tenet__n">貳</span>
+          <h3>祖先的名字，<br>不該用猜的</h3>
+          <p>舊牌褪色、受潮模糊時，最重要的不是趕快重刻，而是先把原始資料留下來。看不清楚的部分寧可查、寧可等，也不臆測。</p>
+        </article>
+        <article class="tenet">
+          <span class="tenet__n">參</span>
+          <h3>用科技，<br>做更長久的尊重</h3>
+          <p>毛筆墨跡撐不過數十年的潮濕與香火，雷射雕刻可以。完工後同時提供電子檔與紙本備存，下一代要再整理時，不必從頭猜起。</p>
+        </article>
+      </div>
+
+      <div class="grid" style="align-items:center">
+        <figure class="fig c6" style="border-color:rgba(176,129,44,.3)">
+          <img src="assets/poster.jpg" width="1204" height="782" loading="lazy"
+               alt="小南雕刻的服務說明文宣：祖先牌位雕刻，專業、莊嚴、代代相傳。">
+        </figure>
+        <div class="c6">
+          <p style="font-family:var(--font-display);font-size:clamp(1.15rem,1rem + .8vw,1.5rem);line-height:1.65;color:var(--ink-strong)">「一筆一畫，是敬意；一刀一刻，是傳承。<br>每一個名字，都值得被清楚看見。」</p>
+          <p class="lede" style="font-size:15.5px;margin-bottom:0">這是小南雕刻對外說明服務時，寫在第一行的話。專業排版、精準雕刻、慎終追遠——三件事的順序不能顛倒，因為前面錯了，後面刻得再漂亮也沒有意義。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 龍益行 -->
+  <section class="band band--white" id="work" aria-labelledby="work-h">
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <span class="eyebrow">Longe — 龍益行</span>
+          <h2 id="work-h">從一炷香<br>到一座祖龕</h2>
+        </div>
+        <p class="lede">龍益行是台南在地的佛具店、金紙店與宗教百貨；小南雕刻則專責神主牌與祖先牌位的資料整理與雷射雕刻。一邊是日常的敬拜，一邊是一輩子可能只做一次、卻絕不能做錯的事。</p>
+      </div>
+
+      <div class="grid">
+        <figure class="fig fig--43 c8">
+          <img src="assets/shrine-room.jpg" width="1600" height="1200" loading="lazy"
+               alt="傳統台灣神明廳：兩層雕花神桌、紅底金線神明彩、蓮花燈、銅香爐與供果。">
+          <figcaption><b>神桌・公媽龕</b>　丈量、擇日、安神位、入火安座，一次到位</figcaption>
+        </figure>
+        <figure class="fig fig--34 c4">
+          <img src="assets/shrine-detail.jpg" width="1600" height="1200" loading="lazy"
+               style="object-position:60% 50%"
+               alt="供桌上的銅香爐、紅蓮花燈與供果特寫。">
+          <figcaption><b>陳設細節</b>　香爐、燭台、供品的位置，都有規矩</figcaption>
+        </figure>
+
+        <div class="c12" style="margin-top:.3rem">
+          <ul class="svc">
+            <li>神主牌・祖先牌位雷射雕刻</li>
+            <li>舊牌褪色重製與字跡整理</li>
+            <li>宗祠、家族批量資料彙整</li>
+            <li>納骨堂牌位規格確認與刻製</li>
+            <li>擇日、安神位、安祖先</li>
+            <li>神明出火・入火安座・退火</li>
+            <li>神桌、佛櫥、公媽龕安裝</li>
+            <li>神明衣帽整理與更換</li>
+            <li>佛具、香品、金紙與祭祀用品</li>
+            <li>外縣市宅配與遠距建檔服務</li>
+          </ul>
+        </div>
+
+        <figure class="fig fig--wide c12" style="margin-top:.4rem">
+          <img src="assets/warm-craft.jpg" width="1600" height="1200" loading="lazy"
+               style="object-position:50% 62%"
+               alt="工坊裡的木作：檜木、鑿刀、黃銅尺與捲曲木屑。">
+          <figcaption>選材・木作・修整　—　牌位的底子先做好，字才刻得住</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 承 -->
+  <section class="mark" aria-label="家族記憶">
+    <div class="wrap mark__in">
+      <span class="mark__glyph" aria-hidden="true">承</span>
+      <div>
+        <p class="big">「神主牌保存的不只是名字，<br>而是一個家族的文化、一代又一代的記憶。」</p>
+        <p>父親那一代用手工雕刻與記憶做事；到了他這一代，多了機台、電腦與檔案。變的是工具，沒變的是——每一筆都要對得起這個家。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 商務 -->
+  <section class="band band--sand" id="business" aria-labelledby="business-h">
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <span class="eyebrow">Community — 商務與社會參與</span>
+          <h2 id="business-h">在團隊裡，<br>他是先把責任接下來的那個</h2>
+        </div>
+        <p class="lede">從第五屆的會員委員會一路做到主席、再到帶著一群人籌組新分會，他的商務履歷不是頭銜的累積，而是每一屆都有人願意再把事情交給他。</p>
+      </div>
+
+      <div class="roles">
+        <div>
+          <p class="sub">BNI 大台南市區・真鑽分會（我們重承諾）</p>
+          <ul class="ladder">
+            <li class="is-now"><b>第十二屆　導師協調員</b><span>現任</span></li>
+            <li><b>第十一屆　成長協調員</b><span>歷任</span></li>
+            <li><b>第十屆　主席</b><span>歷任</span></li>
+            <li><b>第九屆　副主席／會員協調員</b><span>歷任</span></li>
+            <li><b>第八屆　教育協調員</b><span>歷任</span></li>
+            <li><b>第七屆　秘書財務</b><span>歷任</span></li>
+            <li><b>第五、六屆　會員委員會</b><span>歷任</span></li>
+          </ul>
+        </div>
+
+        <div style="display:grid;gap:clamp(1rem,2vw,1.4rem);align-content:start">
+          <div class="card">
+            <h3>大台南南區・真鑫分會</h3>
+            <p>從咖啡會議、參訪典範分會，一步步把一群有想法的人凝聚成團隊，2026 年 3 月正式啟動籌備會。分會的核心不是做生意，而是用系統與團隊合作，幫企業把不穩定的客源變成可預測的成長。</p>
+            <p style="color:var(--red);margin-bottom:0;letter-spacing:.04em;border-top:1px solid var(--line-soft);padding-top:.9rem">2026 年 8 月　獲頒 BNI 金質獎章</p>
+          </div>
+          <div class="card">
+            <h3>社會參與</h3>
+            <p>台南市朝日行善會 副總顧問／台南市南瀛獅子會 會員／台南市大勢至菩薩正信協會 監事／成博國際有限公司 負責人。</p>
+            <p style="margin-bottom:0">此外亦持續參與學甲中洲邱氏宗親會的祭祖與文化事務——回鄉掛上紅彩球那天他寫下：家的力量不在於誰最強，而在於彼此撐著往上。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 宗祠 -->
+  <section class="band band--paper" aria-label="宗祠">
+    <div class="wrap grid" style="align-items:center">
+      <figure class="fig fig--43 c7">
+        <img src="assets/warm-lineage.jpg" width="1600" height="1200" loading="lazy"
+             alt="整理得乾淨明亮的台灣家族宗祠廊道，紅磚與木格窗，陽光從敞開的門灑進來。">
+      </figure>
+      <div class="c5">
+        <p style="font-family:var(--font-display);font-size:clamp(1.2rem,1rem + .9vw,1.6rem);line-height:1.65;color:var(--ink-strong)">在沒有照片的年代，<br>名字就是一個人存在的證明。</p>
+        <p class="lede" style="font-size:15.5px">所以他把每一次雕刻都當成一次建檔：先問清楚這個家族從哪裡來，再決定木頭上該留下什麼。台南不只是旅行的城市，是一座用歲月讓人著迷的活歷史——他這樣說自己的家鄉。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 聯絡 -->
+  <section class="band band--white" id="contact" aria-labelledby="contact-h">
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <span class="eyebrow">Contact — 聯絡</span>
+          <h2 id="contact-h">先傳一張照片，<br>其他的我們一起確認</h2>
+        </div>
+        <p class="lede">家中牌位是否已經模糊？尺寸怎麼量？舊板能不能留？拍下正反面與內板尺寸傳給小南，先做初步確認，再談後面的事。</p>
+      </div>
+
+      <div class="contact">
+        <div>
+          <dl class="dl">
+            <dt>店　　址</dt><dd>台南市安南區北安路二段 612 號</dd>
+            <dt>市　　話</dt><dd><a href="tel:+88662569113">06-256-9113</a></dd>
+            <dt>小南專線</dt><dd><a href="tel:+886913958599">0913-958-599</a></dd>
+            <dt>LINE ID</dt><dd>led1984</dd>
+            <dt>營業時間</dt><dd>08:00 – 22:00</dd>
+            <dt>服務範圍</dt><dd>台南全區・嘉義・高雄，外縣市可宅配與遠距建檔</dd>
+          </dl>
+          <div class="hero__cta" style="margin-top:1.8rem">
+            <a class="btn btn--solid" href="tel:+886913958599">撥給小南</a>
+            <a class="btn btn--ghost" href="https://maps.google.com/?q=台南市安南區北安路二段612號" target="_blank" rel="noopener">開啟導航</a>
+          </div>
+        </div>
+
+        <div>
+          <span class="eyebrow">Follow</span>
+          <ul class="social">
+            <li><a href="https://www.facebook.com/longe2569113/" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h-2.5A3.5 3.5 0 0 0 9 6.5V9H7v3h2v9h3v-9h2.5l.5-3H12V6.8c0-.5.4-.8.9-.8H15V3Z"/></svg>
+              龍益宗教文物有限公司<em>Facebook</em></a></li>
+            <li><a href="https://www.facebook.com/qiu.nan.yin/" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h-2.5A3.5 3.5 0 0 0 9 6.5V9H7v3h2v9h3v-9h2.5l.5-3H12V6.8c0-.5.4-.8.9-.8H15V3Z"/></svg>
+              邱南寅　個人主頁<em>Facebook</em></a></li>
+            <li><a href="https://www.facebook.com/imperssion0216/" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h-2.5A3.5 3.5 0 0 0 9 6.5V9H7v3h2v9h3v-9h2.5l.5-3H12V6.8c0-.5.4-.8.9-.8H15V3Z"/></svg>
+              小南雕刻／雕刻南人<em>Facebook</em></a></li>
+            <li><a href="https://www.instagram.com/twlonge/" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="3.6"/><circle cx="17.2" cy="6.8" r=".9" fill="currentColor" stroke="none"/></svg>
+              Small South<em>@twlonge</em></a></li>
+            <li><a href="https://www.youtube.com/@306boys" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="M10.3 9.4v5.2l4.6-2.6-4.6-2.6Z"/></svg>
+              306 雕刻南人・神主牌文化<em>YouTube</em></a></li>
+            <li><a href="https://www.tiktok.com/@306boys" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3v10.4a3.4 3.4 0 1 1-3-3.38"/><path d="M14 6.2A4.6 4.6 0 0 0 18.6 9"/></svg>
+              小南雕刻<em>TikTok</em></a></li>
+            <li><a href="https://www.facebook.com/p/%E5%A4%A7%E5%8F%B0%E5%8D%97%E5%8D%97%E5%8D%80%E7%9C%9F%E9%91%AB%E5%88%86%E6%9C%83-61579412713495/" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3.5 19a5.5 5.5 0 0 1 11 0"/><path d="M16 6.2a3 3 0 0 1 0 5.6"/><path d="M17.5 19a5.4 5.4 0 0 0-2-4.2"/></svg>
+              大台南南區真鑫分會<em>Facebook</em></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <p>龍益宗教文物有限公司・小南雕刻｜台南市安南區北安路二段 612 號｜06-256-9113</p>
+    <p>本頁內容整理自公開報導、商業登記與其官方社群貼文；實拍照片由當事人社群提供。</p>
+  </div>
+</footer>
+
+</body>
+</html>
